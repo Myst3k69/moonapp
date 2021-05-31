@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#171717',
     marginBottom:10,
-    marginTop:10,
+    marginTop:20,
   },
 
   textContent: {

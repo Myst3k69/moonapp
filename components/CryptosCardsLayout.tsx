@@ -10,15 +10,8 @@
 
 import React, {useState} from 'react';
 import {Card, Title, Paragraph} from 'react-native-paper';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {Divider} from 'react-native-elements';
+import {ScrollView, StyleSheet, View} from 'react-native';
 
 import CryptoCard from '../components/CryptoCard';
 import {cryptos} from '../constants/datas';
@@ -27,9 +20,21 @@ const CryptosCardsLayout: React.FunctionComponent = () => {
 
   return (
     <ScrollView>
+      <Title style={[styles.textContent, {marginBottom: 5, marginTop: 20}]}>
+        Cryptos
+      </Title>
+      <Divider
+        style={{
+          borderColor: '#DAD9D7',
+          borderBottomWidth: 1,
+          marginBottom:20,
+        }}
+      />
       <View style={styles.container}>
-        {topCryptos.map((crypto,i) => {
-          return <CryptoCard  key={i} name={crypto.name} change={crypto.change} />;
+        {topCryptos.map((crypto, i) => {
+          return (
+            <CryptoCard key={i} name={crypto.name} change={crypto.change} />
+          );
         })}
       </View>
     </ScrollView>
@@ -51,6 +56,7 @@ const styles = StyleSheet.create({
   textContent: {
     color: 'whitesmoke',
     textAlign: 'center',
+    width: '100%',
   },
   gain: {
     color: 'green',

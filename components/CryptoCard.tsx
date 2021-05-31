@@ -21,17 +21,22 @@ import {
 } from 'react-native';
 
 type CryptoCardProps = {
-  name: string,
-  change:string,
+  name: string;
+  change: string;
 };
 
 const CryptoCard = ({name, change}: CryptoCardProps) => {
   return (
-    <Card style={change=='gain'? [styles.card,{backgroundColor:'#267F33'}] : [styles.card,{backgroundColor:'#B10707'}] }>
-    {/* <Card style={change=='gain'? [styles.card,{color:'green'}] }></Card> */}
+    <Card
+      style={[
+        styles.card,
+        change === 'gain'
+          ? {backgroundColor: '#267F33'}
+          : {backgroundColor: '#B10707'},
+      ]}>
       <Card.Content>
         <Title style={styles.textContent}>{name}</Title>
-        <Paragraph style={styles.textContent}>
+        <Paragraph style={[styles.textContent, {fontSize: 10}]}>
           ADA/USDT : <Text> 1.53$ - +5.45% </Text>
         </Paragraph>
       </Card.Content>
@@ -44,6 +49,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#267F33',
     borderWidth: 4,
     width: '50%',
+    borderRadius:5,
+    //height: 120,
   },
 
   textContent: {

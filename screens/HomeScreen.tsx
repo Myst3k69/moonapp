@@ -9,25 +9,23 @@
  */
 
 import React from 'react';
-import {Card, Title, Paragraph, Button} from 'react-native-paper';
 import {
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
-  useColorScheme,
   View,
 } from 'react-native';
 import MainPortFolioCard from '../components/MainPortfolioCard';
 import CryptosCardsLayout from '../components/CryptosCardsLayout';
-import Main from '..';
+import  AppBar  from '../components/AppBar'
 
 const HomeScreen: React.FunctionComponent = () => {
   return (
     <SafeAreaView>
+     <AppBar />
       <View style={styles.container}>
+        
         <MainPortFolioCard />
+       
         <CryptosCardsLayout />
       </View>
     </SafeAreaView>
