@@ -9,6 +9,7 @@
  */
 
 import React from 'react';
+import {Card, Title, Paragraph, Button} from 'react-native-paper';
 import {
   SafeAreaView,
   ScrollView,
@@ -18,13 +19,26 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import MainPortFolioCard from '../components/MainPortfolioCard';
+import CryptosCardsLayout from '../components/CryptosCardsLayout'
+import Main from '..';
 
 const HomeScreen: React.FunctionComponent = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-    </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <MainPortFolioCard/>
+        <CryptosCardsLayout/>
+      </View>
+    </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    backgroundColor: '#000',
+  },
+});
 
 export default HomeScreen;

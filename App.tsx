@@ -10,17 +10,23 @@
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+
 import React from 'react';
 
 import Screens from './navigation/Screens';
+import BottomNav from './navigation/BottomNav'
 
 const Stack = createStackNavigator();
 
 const App: React.FunctionComponent = () => {
   return (
+    <>
     <NavigationContainer>
-      <Screens />
+      {/* <Screens /> */}
+     
     </NavigationContainer>
+     <BottomNav/>
+     </>
   );
 };
 
