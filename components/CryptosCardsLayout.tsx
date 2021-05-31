@@ -21,30 +21,15 @@ import {
 } from 'react-native';
 
 import CryptoCard from '../components/CryptoCard';
-
+import {cryptos} from '../constants/datas';
 const CryptosCardsLayout: React.FunctionComponent = () => {
-  const [topCryptos, setTopCryptos] = useState([
-    { name: 'ADA', change:'gain'},
-    { name: 'XRP', change:'loss'},
-    { name: 'ETH', change:'gain'},
-    { name: 'FTM', change:'gain'},
-    { name: 'ONT', change:'gain'},
-    { name: 'MATIC', change:'loss'},
-    { name: 'QTUM', change:'loss'},
-    { name: 'FIRO', change:'loss'},
-    { name: 'NEO', change:'gain'},
-    { name: 'GRT', change:'gain'},
-    { name: 'TRX', change:'loss'},
-    { name: 'LTC', change:'gain'},
-    { name: 'ETC', change:'gain'},
-    
-  ]);
+  const [topCryptos, setTopCryptos] = useState(cryptos);
 
   return (
     <ScrollView>
       <View style={styles.container}>
-        {topCryptos.map(crypto => {
-          return <CryptoCard  name={crypto.name} change={crypto.change}/>;
+        {topCryptos.map((crypto,i) => {
+          return <CryptoCard  key={i} name={crypto.name} change={crypto.change} />;
         })}
       </View>
     </ScrollView>

@@ -20,15 +20,15 @@ import {
   View,
 } from 'react-native';
 import MainPortFolioCard from '../components/MainPortfolioCard';
-import CryptosCardsLayout from '../components/CryptosCardsLayout'
+import CryptosCardsLayout from '../components/CryptosCardsLayout';
 import Main from '..';
 
 const HomeScreen: React.FunctionComponent = () => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <MainPortFolioCard/>
-        <CryptosCardsLayout/>
+        <MainPortFolioCard />
+        <CryptosCardsLayout />
       </View>
     </SafeAreaView>
   );

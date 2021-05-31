@@ -23,7 +23,7 @@ const App: React.FunctionComponent = () => {
     <>
     <NavigationContainer>
       {/* <Screens /> */}
-     
+    
     </NavigationContainer>
      <BottomNav/>
      </>
